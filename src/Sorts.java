@@ -1,20 +1,25 @@
-public class Sorts {
 
+import java.util.Arrays;
+
+public class Sorts {
+    
     public static void doBubbleSort(Object[] array,byte type) {
         int moveLenght = array.length;
-        Integer[] numbersArray = (Integer[]) array;
+        Integer[] previousArray = Arrays.copyOf(array, array.length, Integer[].class);
+        Integer[] currentArray = (Integer[]) array;
         while (moveLenght != 0) {
             for(int i=0;i<moveLenght-1;i++) {
-                if (numbersArray[i] > numbersArray[i+1]) {
-                    int previousValue = numbersArray[i];
-                    numbersArray[i] = numbersArray[i+1];
-                    numbersArray[i+1] = previousValue;
+                if (currentArray[i] > currentArray[i+1]) {
+                    int previousValue = currentArray[i];
+                    currentArray[i] = currentArray[i+1];
+                    currentArray[i+1] = previousValue;
                 }
             }
             moveLenght -= 1;
         }
 
-        Prints.printsValues(array,numbersArray);
+        Prints.printsValues(previousArray,currentArray);
+        
         Inputs.goMainMenu(array,type);
     }
 
