@@ -24,17 +24,17 @@ public class Sorts {
     }
 
     public static void doMergeSort(Object[] array,byte type) {
-
+        //
         Inputs.goMainMenu(array,type);
     }
 
     public static void doQuickSort(Object[] array,byte type) {
-
+        //
         Inputs.goMainMenu(array,type);
     }
 
     public static void doAddedSort(Object[] array,byte type) {
-
+        Input
         Inputs.goMainMenu(array,type);
     }
 
